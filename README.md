@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resume Builder
 
-## Getting Started
+This is a Next.js application called Resume Builder, a powerful resume builder with AI-powered skill suggestions.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Intuitive Form:** Easily input your professional details.
+- **Live Preview:** See your resume take shape in real-time.
+- **AI Skill Suggestions:** Get AI-powered recommendations for skills based on your job title.
+- **Customizable Themes:** Choose from multiple professional themes.
+- **PDF Export:** Download your resume as a high-quality PDF.
+- **Dark/Light Mode:** Switch between themes for your viewing comfort.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To get started, run the development server and open the app in your browser. The main application is in `src/app/page.tsx`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# **App Name**: Resume Builer
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Core Features:
 
-## Learn More
+- Resume Input Form: Intuitive sidebar form for resume input including name, title, contact info, skills, education, work experience, certifications, and projects.
+- Live Resume Preview: Real-time live preview of the resume updating as the form is completed.
+- Resume Theme Selection: Switchable resume themes with professional design.
+- PDF Export: Button to export the completed resume as a downloadable PDF file.
+- Dark/Light Mode: Toggle for switching between dark and light mode.
+- AI Skills Suggestion: Suggest relevant skills based on inputted job title using an AI skills tool.
 
-To learn more about Next.js, take a look at the following resources:
+## Style Guidelines:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Primary color: HSL(220, 70%, 60%) - A clean, professional blue that inspires confidence.
+- Background color: HSL(220, 20%, 95%) - A very light desaturated blue, almost white, providing a soft, uncluttered backdrop.
+- Accent color: HSL(190, 70%, 50%) - A contrasting cyan to highlight interactive elements and important information.
+- Font pairing: 'Space Grotesk' (sans-serif) for headlines and short amounts of body text, 'Inter' (sans-serif) for body text, giving a modern yet readable appeal.
+- Use a set of consistent, minimalist icons throughout the app to represent various sections (work, education, skills) and actions (download, switch theme).
+- Employ a responsive, grid-based layout to ensure adaptability across devices. Prioritize clear visual hierarchy with ample whitespace.
+- Subtle transitions and animations to enhance user experience, such as smooth scrolling, fade-in effects for content loading, and interactive hover states on buttons and icons.
