@@ -1,21 +1,26 @@
 "use client";
 
-import * as React from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { SidebarProvider, Sidebar, SidebarInset } from '@/components/ui/sidebar';
-import ResumeForm from '@/components/vita-forge/ResumeForm';
-import ResumePreview from '@/components/vita-forge/ResumePreview';
-import { type ResumeData, ResumeSchema } from '@/lib/types';
-import { defaultResumeData } from '@/lib/resume-data';
+import * as React from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  SidebarProvider,
+  Sidebar,
+  SidebarInset,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
+import ResumeForm from "@/components/vita-forge/ResumeForm";
+import ResumePreview from "@/components/vita-forge/ResumePreview";
+import { type ResumeData, ResumeSchema } from "@/lib/types";
+import { defaultResumeData } from "@/lib/resume-data";
 
 export default function ResumeBuilderPage() {
-  const [theme, setTheme] = React.useState('default');
-  
+  const [theme, setTheme] = React.useState("default");
+
   const form = useForm<ResumeData>({
     resolver: zodResolver(ResumeSchema),
     defaultValues: defaultResumeData,
-    mode: 'onBlur',
+    mode: "onBlur",
   });
 
   const resumeData = form.watch();
@@ -35,6 +40,9 @@ export default function ResumeBuilderPage() {
         />
       </Sidebar>
       <SidebarInset>
+        <div className="absolute top-4 left-4 z-10 md:hidden no-print">
+          <SidebarTrigger />
+        </div>
         <ResumePreview data={resumeData} theme={theme} />
       </SidebarInset>
     </SidebarProvider>
